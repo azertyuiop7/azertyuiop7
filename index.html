@@ -3,72 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="An azertyuiop7's website">
-    <title>Azertyuiop7</title>
+    <title>azertyuiop7</title>
     <link rel="icon" type="image/png" sizes="100x100" href="https://azertyuiop7.github.io/7/lionhead.png">
     <meta name="theme-color" content="#0F0">
     <style>
-        :root{--green : #01FF01;}
-        body{font-family: "IBM Plex Mono", monospace; font-size: 20px; color: var(--green);}
+        :root{--main-color : #01ff01; --second-color: #01aa01 ; --bg-color : #070007; --title: #01ff01;}
+        body{background-color: var(--bg-color); margin: 0; font-family: "IBM Plex Mono", monospace; font-size: 15px; color: var(--main-color);}
+        a{color: var(--second-color); font-size: 16px;}
         .container{
             height: 100vh;
             width: 100vw;
-            justify-content: center;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             vertical-align: middle;
         }
         .title{
-            position: absolute;
-            left: 100px;
-            height: 50px;
-            margin: 50px;
-            justify-content: center;
+            position: relative;
+            left: 10vw;
+            max-width: 80vw;
+            margin-top: 5vh;
+            margin-bottom: 3vh;
+            justify-content: left;
             display: flex;
             flex-direction: row;
-            vertical-align: middle;
+            font-size: 20px;
         }
-        h1{color: var(--green); margin: 0;}
+        h1{color: var(--title); margin: 0;}
         .petit_rectangle{
             position: relative;
             top: 23px;
             margin-left: 5px;
             width: 30px;
             height: 15px;
-            background-color: var(--green);
+            background-color: var(--title);
         }
-        .kexe_container{
-            border: 1px solid var(--green);
+        .body-container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kexe-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--main-color);
+            padding: 10px 20px;
+            margin: 20px auto;
+        }
+        .installer{
             display: flex;
             flex-direction: row;
-        }/*#0d1117 #0d1117 #010409  #161b22 #82071e*/
+        }
+        .kexe-copy{
+            border: 1px solid var(--second-color);
+            display: flex;
+            flex-direction: row;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        .copy{
+            margin: auto;
+            width:20px;
+            height: 20px;
+            cursor:pointer;
+        }
+        .cache{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 100vw;
+            height: 100%;
+            background-color: var(--bg-color);
+        }
+        .K_exe{color: var(--second-color); text-decoration: none; font-size: x-large; margin-bottom: -5px;}
+        .CMDCommand{margin-right: 20px;}
+        .container {
+            overflow-y: scroll;
+            scrollbar-color: var(--second-color) var(--bg-color);
+            scrollbar-width: thin;
+        }
     </style>
 </head>
-<body style="background-color:#070007; margin: 0;">
+<body>
     <div class="container">
         <div class="title">
             <h1 id="title">Bienvenue sur mon site !</h1>
             <div id="petit_rectangle" class="petit_rectangle"></div>
         </div>
-        <div class="kexe_container">
-            <div class="kexe_copy">azertyuiop</div>
-            <img src="https://azertyuiop7.github.io/7/copy-1-green-100x100.png" width="20px" height="20px" alt="-Copy-">
+        <div class="body-container">
+            <div class="kexe-container">
+                <a class="K_exe" href="K.exe">K.exe</a>
+                <div class="installer">
+                    <p>Pour l'installer : <a href="K-installer.exe">K-installer</a> ou entrez dans l'invite de commande :</p>
+                </div>
+                <div class="kexe-copy">
+                    <p style="color: var(--second-color);">C:\><p class="CMDCommand">powershell -Command "Invoke-WebRequest https://1089x.github.io/K.exe -Outfile K.exe"</p></p>
+                    <img id="copy" class="copy" src="copy-1-green-100x100.png" alt="✀">
+                    
+                </div>
+                <p>Utilisation : Entrez <b>K fonction()</b> dans une invite</p>
+                <h3>Liste des fonctions :</h3>
+                <p>❖ background(image) : Met en fond d'écran l'image de chemin d'accès ou d'url "image"</br> ❖ background_color(r,g,b) : Met la couleur rbg(r,g,b) en fond d'écran </br> ❖ background_rainbow() : Change la couleur du fond d'écran en dégradé</br> ❖ bubbles(duration) : Affiche des bubulles sur l'écran. (écran de veille)</br> ❖ cmd_d(n) : Effectue cmd+d 10*n fois</br> ❖ download_file(url) : Télécharge le fichier d'url 'url' dans le répertoire d'exécution</br> ❖ hacke(temps) : Ouvre une fenêtre en plein-écran avec un message «hacké», et change de couleur toutes les 20ms pendant environ 'temps' secondes</br> ❖ kill_explorer(duration) : Tue le processus explorer.exe pendant duration secondes</br> ❖ kill(processus) : Tue l'application de nom "processus"</br> ❖ piano() : Joue une note lorsqu'une touche est frappée</br> ❖ press(keys) : Appuie les touches "keys". Touches spéciales : *W → Cmd, *C → Ctrl, *A → Alt, *S → Shift. Par exemple : "*Cc" → Ctrl + c</br> ❖ replace_letters() : Remplace les lettres frappées</br> ❖ sourire(n,color) : Affiche un sourire à l'écran pendant environ n*1.5 secondes, de couleur hexadécimale "BBGGRR."</br> ❖ start(processus) : Ouvre l'application de nom "processus"</br> ❖ cmd(commande) : effectue la commande batch "commande"</br> ❖ t(min:sec) : Délai d'attente de "min:sec" avant d'effectuer les commandes suivantes. Les messages d'erreur ne sont pas affichés si cette fonction est utilisée</br> ❖ update : Télécharge la dernière version de K</p>
+            </div>
+            <div id="cache" class="cache"></div>
         </div>
     </div>
     <script>
         var title="Bienvenue sur mon site !";
         var write=0;
-        function petit_rectangle_hidden(){document.getElementById("petit_rectangle").style.visibility ="hidden"; setTimeout(petit_rectangle_visible,500);};
-        function petit_rectangle_visible(){document.getElementById("petit_rectangle").style.visibility ="visible"; setTimeout(petit_rectangle_hidden,600);};
+        var g = 0;
+        function petit_rectangle_hidden(){document.getElementById("petit_rectangle").style.visibility ="hidden"; setTimeout(petit_rectangle_visible,500)};
+        function petit_rectangle_visible(){document.getElementById("petit_rectangle").style.visibility ="visible"; setTimeout(petit_rectangle_hidden,600)};
         function write_title(){
             document.getElementById("title").innerText = title.substring(0, write);
             write++
-            if (write<25){setTimeout(write_title,50);}
+            if (write<25){setTimeout(write_title,50)}
             else {petit_rectangle_visible();};
         };
         write_title();
+
+        function copy(){
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = 'powershell -Command "Invoke-WebRequest https://azertyuiop7.github.io/K.exe -Outfile K.exe"';
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            tempTextArea.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            document.getElementById("copy").src = "check-mark-green-100px.png"
+        }
+        document.getElementById("copy").addEventListener("click", copy);
+        function change_colors(){
+            document.getElementById('cache').style.backgroundColor = "rgba(0,0,2,"+(1-g/100)+")";
+            if(g<100){g+=3; setTimeout(change_colors,30);}
+            else{document.getElementById("cache").style.visibility ="hidden";}
+        };
+        change_colors()
     </script>
 </body>
 </html>
-
-
-<!--https://icon-library.com/images/copy-icon-png/copy-icon-png-28.jpg-->
