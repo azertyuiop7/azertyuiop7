@@ -7,9 +7,11 @@
     <link rel="icon" type="image/png" sizes="100x100" href="https://azertyuiop7.github.io/7/lionhead.png">
     <meta name="theme-color" content="#0F0">
     <style>
-        :root{--main-color : #01ff01; --second-color: #01aa01 ; --bg-color : #070007; --title: #01ff01;}
+        :root{--main-color : #01ff01; --second-color: #01aa30 ; --bg-color : #070007; --title: #01ff01;}
         body{background-color: var(--bg-color); margin: 0; font-family: "IBM Plex Mono", monospace; font-size: 15px; color: var(--main-color);}
         a{color: var(--second-color); font-size: 16px;}
+        b{color: var(--second-color);}
+        code{color: var(--second-color);}
         .container{
             height: 100vh;
             width: 100vw;
@@ -84,6 +86,8 @@
             scrollbar-color: var(--second-color) var(--bg-color);
             scrollbar-width: thin;
         }
+        .trait{float: inline-start; margin: 11px; background-color: var(--main-color); width: 15vw; height: 1px;}
+
     </style>
 </head>
 <body>
@@ -99,13 +103,14 @@
                     <p>Pour l'installer : <a href="K-installer.exe">K-installer</a> ou entrez dans l'invite de commande :</p>
                 </div>
                 <div class="kexe-copy">
-                    <p style="color: var(--second-color);">C:\><p class="CMDCommand">powershell -Command "Invoke-WebRequest https://1089x.github.io/K.exe -Outfile K.exe"</p></p>
+                    <p class="CMDCommand"><code>C:\></code>powershell -Command "Invoke-WebRequest https://1089x.github.io/K.exe -Outfile K.exe"</p></p>
                     <img id="copy" class="copy" src="copy-1-green-100x100.png" alt="✀">
                     
                 </div>
-                <p>Utilisation : Entrez <b>K fonction()</b> dans une invite</p>
-                <h3>Liste des fonctions :</h3>
-                <p>❖ background(image) : Met en fond d'écran l'image de chemin d'accès ou d'url "image"</br> ❖ background_color(r,g,b) : Met la couleur rbg(r,g,b) en fond d'écran </br> ❖ background_rainbow() : Change la couleur du fond d'écran en dégradé</br> ❖ bubbles(duration) : Affiche des bubulles sur l'écran. (écran de veille)</br> ❖ cmd_d(n) : Effectue cmd+d 10*n fois</br> ❖ download_file(url) : Télécharge le fichier d'url 'url' dans le répertoire d'exécution</br> ❖ hacke(temps) : Ouvre une fenêtre en plein-écran avec un message «hacké», et change de couleur toutes les 20ms pendant environ 'temps' secondes</br> ❖ kill_explorer(duration) : Tue le processus explorer.exe pendant duration secondes</br> ❖ kill(processus) : Tue l'application de nom "processus"</br> ❖ piano() : Joue une note lorsqu'une touche est frappée</br> ❖ press(keys) : Appuie les touches "keys". Touches spéciales : *W → Cmd, *C → Ctrl, *A → Alt, *S → Shift. Par exemple : "*Cc" → Ctrl + c</br> ❖ replace_letters() : Remplace les lettres frappées</br> ❖ sourire(n,color) : Affiche un sourire à l'écran pendant environ n*1.5 secondes, de couleur hexadécimale "BBGGRR."</br> ❖ start(processus) : Ouvre l'application de nom "processus"</br> ❖ cmd(commande) : effectue la commande batch "commande"</br> ❖ t(min:sec) : Délai d'attente de "min:sec" avant d'effectuer les commandes suivantes. Les messages d'erreur ne sont pas affichés si cette fonction est utilisée</br> ❖ update : Télécharge la dernière version de K</p>
+                <p>Utilisation : Entrez <code>K fonction()</code> dans une invite. Par exemple <code>K t(60) sourire(15)</code> pour afficher un sourire pendant 15 secondes une minute après le lancement de la commande.</p>
+                <h3 style="margin-bottom: 0px;"><div class="trait"></div>Liste des fonctions :<div class="trait" style="float: inline-end;"></div></h3>
+                
+                <p> ❖ <code>background(image)</code> : Met en fond d'écran l'image de chemin d'accès ou d'url "image"</br> ❖ <code>background_color(r,g,b)</code> : Met la couleur rbg(r,g,b) en fond d'écran </br> ❖ <code>background_rainbow()</code> : Change la couleur du fond d'écran en dégradé</br> ❖ <code>bubbles(duration)</code> : Affiche des bubulles sur l'écran. (écran de veille)</br> ❖ <code>cmd_d(n)</code> : Effectue cmd+d 10*n fois</br> ❖ <code>download_file(url)</code> : Télécharge le fichier d'url 'url' dans le répertoire d'exécution</br> ❖ <code>hacke(temps)</code> : Ouvre une fenêtre en plein-écran avec un message «hacké», et change de couleur toutes les 20ms pendant environ 'temps' secondes</br> ❖ <code>kill_explorer(duration)</code> : Kill le processus explorer.exe pendant duration secondes</br> ❖ <code>kill(processus)</code> : Tue l'application de nom "processus"</br> ❖ <code>piano()</code> : Joue une note lorsqu'une touche est frappée</br> ❖ <code>press(keys)</code> : Appuie les touches "keys". Touches spéciales : *W → Cmd, *C → Ctrl, *A → Alt, *S → Shift. Par exemple : "*Cc" → Ctrl + c</br> ❖ <code>replace_letters()</code> : Remplace les lettres frappées</br> ❖ <code>sourire(n,color)</code> : Affiche un sourire à l'écran pendant environ n*1.5 secondes, de couleur hexadécimale "BBGGRR."</br> ❖ <code>start(processus)</code> : Ouvre l'application de nom "processus"</br> ❖ <code>cmd(commande)</code> : effectue la commande batch "commande"</br> ❖ <code>t(min:sec)</code> : Délai d'attente de "min:sec" avant d'effectuer les commandes suivantes. Les messages d'erreur ne sont pas affichés si cette fonction est utilisée</br> ❖ <code>update</code> : Télécharge la dernière version de K</br></p>
             </div>
             <div id="cache" class="cache"></div>
         </div>
@@ -119,7 +124,7 @@
         function write_title(){
             document.getElementById("title").innerText = title.substring(0, write);
             write++
-            if (write<25){setTimeout(write_title,50)}
+            if (write<25){setTimeout(write_title,50)}//Math.random()*200-50
             else {petit_rectangle_visible();};
         };
         write_title();
