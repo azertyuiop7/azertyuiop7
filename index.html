@@ -9,8 +9,8 @@
     <style>
         :root{--main-color : #01ff01; --second-color: #01aa30 ; --bg-color : #070007; --title: #01ff01;}
         body{background-color: var(--bg-color); margin: 0; font-family: "IBM Plex Mono", monospace; font-size: 15px; color: var(--main-color);}
+        p{font-size: 15px;}
         a{color: var(--second-color); font-size: 16px;}
-        b{color: var(--second-color);}
         code{color: var(--second-color);}
         .container{
             height: 100vh;
@@ -93,8 +93,7 @@
 <body>
     <div class="container">
         <div class="title">
-            <h1 id="title">Bienvenue sur mon site !</h1>
-            <div id="petit_rectangle" class="petit_rectangle"></div>
+            <h1 id="title">Bienvenue sur mon site !</h1><div id="petit_rectangle" class="petit_rectangle"></div>
         </div>
         <div class="body-container">
             <div class="kexe-container">
@@ -124,7 +123,7 @@
         function write_title(){
             document.getElementById("title").innerText = title.substring(0, write);
             write++
-            if (write<25){setTimeout(write_title,50)}//Math.random()*200-50
+            if (write<25){setTimeout(write_title,40)}//Math.random()*200-50
             else {petit_rectangle_visible();};
         };
         write_title();
@@ -142,7 +141,7 @@
         document.getElementById("copy").addEventListener("click", copy);
         function change_colors(){
             document.getElementById('cache').style.backgroundColor = "rgba(0,0,2,"+(1-g/100)+")";
-            if(g<100){g+=3; setTimeout(change_colors,30);}
+            if(g<100){g+=3; setTimeout(change_colors,35);}
             else{document.getElementById("cache").style.visibility ="hidden";}
         };
         change_colors()
