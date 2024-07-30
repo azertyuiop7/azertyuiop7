@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="An azertyuiop7's website">
+    <title>azertyuiop7 &middot; Page non trouvée</title>
+    <link rel="icon" type="image/png" sizes="100x100" href="https://azertyuiop7.github.io/lionhead.png">
+    <meta name="theme-color" content="#400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel&effect=fire">
+    <style>
+        /*:root{--h : 1;}*/
+        h1{
+            font-family: "Cinzel", serif;
+            /*transform: scaleY(var(--h));*/
+        }
+    </style>
+</head>
+<body style="background-color: black; margin: 0px;">
+    <div id="container" class="button container" style="display: flex; flex-direction: column; vertical-align: middle; height: 100vh; justify-content: center; text-align: center;">
+        <h1 class="font-effect-fire" id="text">Erreur 404</h1>
+        <h1 class="font-effect-fire" id="line2">Cette page n'existe pas, ou a été supprimée.</h1>
+    </div>
+    <script>
+        const line2 = "Cette page n'existe pas, ou a été supprimée.";
+        let write = 0;
+        function Write() {
+            if (write<45) {
+                document.getElementById("line2").innerText = line2.substring(0, write);
+                write+=1;
+                setTimeout(Write, 50);
+            }
+        }
+        Write();
+    </script>
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="An azertyuiop7's website">
+    <title>azertyuiop7 &middot; Page non trouvée</title>
+    <link rel="icon" type="image/png" sizes="100x100" href="https://azertyuiop7.github.io/lionhead.png">
+    <meta name="theme-color" content="#400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <style>
+        :root{--h : 1;}
+        h1{
+            font-family: "Cinzel", serif;
+            transform: scaleY(var(--h));
+            /*text-shadow: 1px 1px 2px white,  0 0 5px cyan, 0 0 25px blue;*/
+            /*text-shadow: 1px 1px 2px white,  0 0 5px greenyellow, 0 0 25px green, 0 0 50px rgb(0, 39, 0);*/
+            /*text-shadow: 1px 1px 2px black, 0 0 25px lime, 0 0 5px #008b00;*/
+            text-shadow: 1px 1px 2px white, 0 0 25px #008b00, 0 0 5px lime;
+        }
+    </style>
+</head>
+<body style="background-color: black; margin: 0px;">
+    <div id="container" class="button container" style="display: flex; flex-direction: column; vertical-align: middle; height: 100vh; justify-content: center; text-align: center;">
+        <h1 id="text">Erreur 404</h1>
+        <h1 id="text">Cette page n'existe pas, ou a été supprimée.</h1>
+    </div>
+    <script>
+        let h = 0;
+        function scaleY() {
+            if (h < 1) {
+                document.documentElement.style.setProperty('--h', -h*h+2*h);
+                h += 0.05;
+                setTimeout(scaleY,50);}
+        }
+        scaleY();
+    </script>
+</body>
+</html>
+
+
+-->
+
+
+
+<!-- https://matias.ma/nsfw/ 
+
+color:antiquewhite;
+font-family:OFL Sorts Mill Goudy, Noto Nastaliq Urdu, My Noto Nastaliq Urdu, Georgia, serif
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+  
+
+
+Cinzel|Fauna+One serif
+
+"Audiowide", sans-serif;
+
+-->
